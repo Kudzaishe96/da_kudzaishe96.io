@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+
+  <meta
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    name="viewport"
+  />
+
+  <title>Homepage | Atom Template</title>
+
+  <meta property="og:title" content="Homepage | Atom Template" />
+
+  <meta property="og:locale" content="en_US" />
+
+  <link
+    rel="canonical"
+    href="//"
+  />
+
+  <meta
+    property="og:url"
+    content="//"
+  />
+
+  <meta
+    name="description"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  />
+
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+
+  <meta name="theme-color" content="#5540af" />
+
+  <meta property="og:site_name" content="Atom Template" />
+
+  <meta property="og:image" content="//assets/img/social.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="twitter:site" content="@tailwindmade" />
+
+  <link
+    crossorigin="crossorigin"
+    href="https://fonts.gstatic.com"
+    rel="preconnect"
+  />
+
+  <link
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="preload"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    crossorigin="anonymous"
+    href="/assets/styles/main.min.css"
+    media="screen"
+    rel="stylesheet"
+  />
+  
+  <script
+    defer
+    src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"
+  ></script>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  
+</head>
+
+
+  <body
+    :class="{ 'overflow-hidden max-h-screen': mobileMenu }"
+    class="relative"
+    x-data="{ mobileMenu: false }"
+  >
+    
+    <div id="main" class="relative">
+      <div
+  x-data="{
+    triggerNavItem(id) {
+        $scroll(id)
+    },
+    triggerMobileNavItem(id) {
+        mobileMenu = false;
+        this.triggerNavItem(id)
+    }
+}"
+>
+  <div class="w-full z-50 top-0 py-3 sm:py-5  absolute
+  ">
+  <div class="container flex items-center justify-between">
+    <div>
+      
+    </div>
+    <div class="hidden lg:block">
+      <ul class="flex items-center">
+        
+        <li class="group pl-6">
+          
+          <span
+            @click="triggerNavItem('#about')"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >About</span
+          >
+          
+          <span
+            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+          ></span>
+        </li>
+        
+        <li class="group pl-6">
+          
+          <span
+            @click="triggerNavItem('#services')"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >Services</span
+          >
+          
+          <span
+            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+          ></span>
+        </li>
+        
+        <li class="group pl-6">
+          
+          <span
+            @click="triggerNavItem('#portfolio')"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >Portfolio</span
+          >
+          
+          <span
+            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+          ></span>
+        </li>
+        
+        
+        
+        <li class="group pl-6">
+          
+          <span
+            @click="triggerNavItem('#work')"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >Work</span
+          >
+          
+          <span
+            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+          ></span>
+        </li>
+        
+        
+        
+        
+        <li class="group pl-6">
+          
+          <span
+            @click="triggerNavItem('#contact')"
+            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >Contact</span
+          >
+          
+          <span
+            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+          ></span>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="block lg:hidden">
+      <button @click="mobileMenu = true">
+        <i class="bx bx-menu text-4xl text-white"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden"
+  :class="{ 'opacity-100 pointer-events-auto': mobileMenu }"
+>
+  <div
+    class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3"
+  >
+    <button
+      class="absolute top-0 right-0 mt-4 mr-4"
+      @click="mobileMenu = false"
+    >
+      <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt="" />
+    </button>
+
+    <ul class="mt-8 flex flex-col">
+      
+      <li class="py-2">
+        
+        <span
+          @click="triggerMobileNavItem('#about')"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          >About</span
+        >
+        
+      </li>
+      
+      <li class="py-2">
+        
+        <span
+          @click="triggerMobileNavItem('#services')"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          >Services</span
+        >
+        
+      </li>
+      
+      <li class="py-2">
+        
+        <span
+          @click="triggerMobileNavItem('#portfolio')"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          >Portfolio</span
+        >
+        
+      </li>
+      
+      <li class="py-2">
+        
+        <span
+          @click="triggerMobileNavItem('#clients')"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          >Clients</span
+        >
+        
+      </li>
+      
+      <li class="py-2">
+        
+        <span
+          @click="triggerMobileNavItem('#work')"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          >Work</span
+        >
+        
+      </li>
+      
+      <li class="py-2">
+        
+        <span
+          @click="triggerMobileNavItem('#statistics')"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          >Statistics</span
+        >
+        
+      </li>
+      
+      <li class="py-2">
+        
+        <span
+          @click="triggerMobileNavItem('#blog')"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          >Blog</span
+        >
+        
+      </li>
+      
+      <li class="py-2">
+        
+        <span
+          @click="triggerMobileNavItem('#contact')"
+          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+          >Contact</span
+        >
+        
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+      <div><div
+  class="relative bg-cover bg-center bg-no-repeat py-8"
+  style="background-image: url(/assets/img/suppersales.jpg)"
+>
+  <div
+    class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat"
+  ></div>
+
+  <div
+    class="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48"
+  >
+    <div class="flex flex-col items-center justify-center lg:flex-row">
+      <div class="rounded-full border-8 border-primary shadow-xl">
+        <img
+          src="/assets/img/kue_image.jpg"
+          class="h-48 rounded-full sm:h-56"
+          alt="author"
+        />
+      </div>
+      <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
+        <h1
+          class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
+        >
+          Hello I'm Kudzaishe Gabriel Manyanya
+        </h1>
+        <div
+          class="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start"
+        >
+          <div
+            class="flex items-center justify-center pl-0 sm:justify-start md:pl-1"
+          >
+            <p class="font-body text-lg uppercase text-white">Let's connect</p>
+            <div class="hidden sm:block">
+              <i class="bx bx-chevron-right text-3xl text-yellow"></i>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0"
+          >
+            <a href="https://github.com/Kudzaishe96" class="pl-4" target="_blank">
+              <i class="bx bxl-github text-2xl text-white hover:text-yellow"></i>
+            </a>
+
+            <a href="Https://www.linkedin.com/in/kudzaishe-manyanya96" class="pl-4" target="_blank">
+              <i
+                class="bx bxl-linkedin text-2xl text-white hover:text-yellow"
+              ></i>
+            </a>
+            <a href="/" class="pl-4">
+              <i
+                class="bx bxl-instagram text-2xl text-white hover:text-yellow"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-grey-50" id="about">
+  <div class="container flex flex-col items-center py-16 md:py-20 lg:flex-row">
+    <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
+      <h2
+        class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+      >
+        Who am I?
+      </h2>
+      <h4
+        class="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+      >
+        I'm Kudzaishe Gabriel Manyanya,a Data Analyst and Data Engineer
+      </h4>
+      <p class="pt-6 font-body leading-relaxed text-grey-20">
+        Versatile Data Analytics professional with <b>6+
+        years </b>of experience in delivering high-impact
+        solutions across collaborative teams. Skilled in
+        <b>Microsoft Power BI and Azure cloud tools
+        (Synapse Analytics, Databricks, Data Factory)</b> for
+        building scalable data workflows and analytical
+        reporting. Adept in SAP reporting tools including
+        Web Intelligence and Crystal Reports. Known for
+        integrity, leadership, and strong decisionmaking, with a proven track record of driving
+        team excellence.
+      </p>
+      <div
+        class="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start"
+      >
+        <div class="flex items-center justify-center sm:justify-start">
+          <p class="font-body text-lg font-semibold uppercase text-grey-20">
+            Connect with me
+          </p>
+          <div class="hidden sm:block">
+            <i class="bx bx-chevron-right text-2xl text-primary"></i>
+          </div>
+        </div>
+        <div
+          class="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0"
+        >
+            <a href="https://github.com/Kudzaishe96" class="pl-4" target="_blank">
+              <i class="bx bxl-github text-2xl text-primary hover:text-yellow"></i>
+            </a>
+          <a href="Https://www.linkedin.com/in/kudzaishe-manyanya96" class="pl-4">
+            <i
+              class="bx bxl-linkedin text-2xl text-primary hover:text-yellow"
+            ></i>
+          </a>
+          <a href="/" class="pl-4">
+            <i
+              class="bx bxl-instagram text-2xl text-primary hover:text-yellow"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
+      <div>
+        <div class="flex items-end justify-between">
+          <h4 class="font-body font-semibold uppercase text-black">
+            SQL
+          </h4>
+          <h3 class="font-body text-3xl font-bold text-primary">91%</h3>
+        </div>
+        <div class="mt-2 h-3 w-full rounded-full bg-lila">
+          <div class="h-3 rounded-full bg-primary" style="width: 91%"></div>
+        </div>
+      </div>
+      <div class="pt-6">
+        <div class="flex items-end justify-between">
+          <h4 class="font-body font-semibold uppercase text-black">PYTHON</h4>
+          <h3 class="font-body text-3xl font-bold text-primary">85%</h3>
+        </div>
+        <div class="mt-2 h-3 w-full rounded-full bg-lila">
+          <div class="h-3 rounded-full bg-primary" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="pt-6">
+        <div class="flex items-end justify-between">
+          <h4 class="font-body font-semibold uppercase text-black">
+            DAX
+          </h4>
+          <h3 class="font-body text-3xl font-bold text-primary">95%</h3>
+        </div>
+        <div class="mt-2 h-3 w-full rounded-full bg-lila">
+          <div class="h-3 rounded-full bg-primary" style="width: 95%"></div>
+        </div>
+      </div>
+      <div class="pt-6">
+        <div class="flex items-end justify-between">
+          <h4 class="font-body font-semibold uppercase text-black">CLOUD TECH</h4>
+          <h3 class="font-body text-3xl font-bold text-primary">91%</h3>
+        </div>
+        <div class="mt-2 h-3 w-full rounded-full bg-lila">
+          <div class="h-3 rounded-full bg-primary" style="width: 91%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-16 md:py-20" id="services">
+  <h2
+    class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+  >
+    Here's what I'm good at
+  </h2>
+  <h3
+    class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+  >
+    These are the services I offer
+  </h3>
+
+  <div
+    class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3"
+  >
+    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+        <div class="hidden group-hover:block">
+          <img
+            src="/assets/img/icon-development-white.svg"
+            alt="development icon"
+          />
+        </div>
+        <div class="block group-hover:hidden">
+          <img
+            src="/assets/img/icon-development-black.svg"
+            alt="development icon"
+          />
+        </div>
+      </div>
+      <div class="text-center">
+        <h3
+          class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+        >
+          DATA CLEANING
+        </h3>
+        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
+          Transform messy datasets into reliable, analysis-ready assets by removing errors, handling missing values, and standardizing formats..
+        </p>
+      </div>
+    </div>
+    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+        <div class="hidden group-hover:block">
+          <img
+            src="/assets/img/icon-content-white.svg"
+            alt="content marketing icon"
+          />
+        </div>
+        <div class="block group-hover:hidden">
+          <img
+            src="/assets/img/icon-content-black.svg"
+            alt="content marketing icon"
+          />
+        </div>
+      </div>
+      <div class="text-center">
+        <h3
+          class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+        >
+          DATA MINING
+        </h3>
+        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
+          Discover hidden patterns and insights through clustering, classification, and predictive modeling techniques.
+        </p>
+      </div>
+    </div>
+    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+        <div class="hidden group-hover:block">
+          <img
+            src="/assets/img/icon-mobile-white.svg"
+            alt="Mobile Application icon"
+          />
+        </div>
+        <div class="block group-hover:hidden">
+          <img
+            src="/assets/img/icon-mobile-black.svg"
+            alt="Mobile Application icon"
+          />
+        </div>
+      </div>
+      <div class="text-center">
+        <h3
+          class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+        >
+          DATA ANALYTICS
+        </h3>
+        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
+          Turn raw data into actionable business intelligence with clear reporting, storytelling, and measurable impact.
+        </p>
+      </div>
+    </div>
+    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+        <div class="hidden group-hover:block">
+          <img
+            src="/assets/img/cloud.png"
+            alt="Email Marketing icon"
+          />
+        </div>
+        <div class="block group-hover:hidden">
+          <img
+            src="/assets/img/cloud.png"
+            alt="Email Marketing icon"
+          />
+        </div>
+      </div>
+      <div class="text-center">
+        <h3
+          class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+        >
+          CLOUD TECHCNOLOGY
+        </h3>
+        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
+          Design and deploy scalable cloud solutions using Azure and AWS, enabling secure data storage, pipeline orchestration, and advanced analytics.
+        </p>
+      </div>
+    </div>
+    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+        <div class="hidden group-hover:block">
+          <img
+            src="/assets/img/data-pipeline.png"
+            alt="Theme Design icon"
+          />
+        </div>
+        <div class="block group-hover:hidden">
+          <img
+            src="/assets/img/data-pipeline.png"
+            alt="Theme Design icon"
+          />
+        </div>
+      </div>
+      <div class="text-center">
+        <h3
+          class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+        >
+          DATA PIPELINE MANAGEMENT
+        </h3>
+        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
+          Design and optimize end-to-end pipelines for seamless data flow, using Azure, Databricks, and Python to ensure scalability and reliability.
+        </p>
+      </div>
+    </div>
+    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+        <div class="hidden group-hover:block">
+          <img
+            src="/assets/img/icon-graphics-white.svg"
+            alt="Graphic Design icon"
+          />
+        </div>
+        <div class="block group-hover:hidden">
+          <img
+            src="/assets/img/icon-graphics-black.svg"
+            alt="Graphic Design icon"
+          />
+        </div>
+      </div>
+      <div class="text-center">
+        <h3
+          class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+        >
+          DASHBOARD DESIGN
+        </h3>
+        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
+          Create interactive, visually appealing dashboards in Power BI or Tableau with accessibility and branding in mind.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-16 md:py-20" id="portfolio">
+  <h2
+    class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+  >
+    My Portfolio
+  </h2>
+  
+
+  <div
+    class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
+  >
+    <a
+      href="https://app.powerbi.com/view?r=eyJrIjoiYzE4MWExZDItNWMzZi00MWQzLWE0NjEtYTczNWVmZGFjMDJmIiwidCI6Ijc1NTE5MmU4LTBiYTAtNDNkMS04NDBhLTBhYjliY2JiOWY4ZSJ9"
+      class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+      target="_blank"
+    >
+      <img
+        src="/assets/img/finopps.jpg"
+        class="w-full shadow"
+        alt="portfolio image"
+      />
+        <span
+                class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                >Finopps Analytics</span
+              >
+        <div class="pt-2">
+                <span class="block font-body text-black"
+                  >Delivering insights for FINOPPS by comparing PAYG Rates with CSP Rates, aiming to determine whether transitioning to a CSP would be more advantageous than staying with the PAYG Rate.</span
+                >
+              </div>
+     
+    </a>
+    
+    <a
+      href="https://app.powerbi.com/view?r=eyJrIjoiOGIwMjUzNWUtMjI4MS00MzhlLWFjZDUtNzdiZjc4ZDc2OTZiIiwidCI6Ijc1NTE5MmU4LTBiYTAtNDNkMS04NDBhLTBhYjliY2JiOWY4ZSJ9"
+      class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+      target="_blank"
+    >
+      <img
+        src="/assets/img/suppersales.jpg"
+        class="w-full shadow"
+        alt="portfolio image"
+      />
+              <span
+                class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                >SUPPER STORE SALES</span
+              >
+        <div class="pt-2">
+                <span class="block font-body text-black"
+                  >Unveiling trends Sales trends for Supper Store  and showcasing profits,revenue and returns for the financial years.</span
+                >
+              </div>
+    </a>
+    <a
+      href="https://app.powerbi.com/view?r=eyJrIjoiMjM4NzFkN2YtMGE2YS00ZGViLTkwNDEtYmY5ZDZkNmM5MTU1IiwidCI6Ijc1NTE5MmU4LTBiYTAtNDNkMS04NDBhLTBhYjliY2JiOWY4ZSJ9"
+      class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+      target="_blank"
+    >
+      <img
+        src="/assets/img/kue_chess.jpg"
+        class="w-full shadow"
+        alt="portfolio image"
+      />
+              <span
+                class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                >CHESS STASTS</span
+              >
+        <div class="pt-2">
+                <span class="block font-body text-black"
+                  >This project seek to show the extraction of raw data into meaningfull sql views by use of APIs showing My Online Chess stats on chess.com.</span
+                >
+              </div>
+    </a>
+    <a
+      href="https://app.powerbi.com/view?r=eyJrIjoiNWUzNGUyMjItMTc1NC00N2ZlLThhNzQtMjE2Y2NlMjM0MDUwIiwidCI6Ijc1NTE5MmU4LTBiYTAtNDNkMS04NDBhLTBhYjliY2JiOWY4ZSJ9"
+      class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+      target="_blank"
+    >
+      <img
+        src="/assets/img/back_churn.jpg"
+        class="w-full shadow"
+        alt="portfolio image"
+      />
+              <span
+                class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                >BANK CHURN ANALYTICS</span
+              >
+        <div class="pt-2">
+                <span class="block font-body text-black"
+                  > Analyzing customer churn in a retail banking dataset, identifying key drivers behind customer attrition, retention strategies.
+              </div>
+    </a>
+  </div>
+</div>
+
+<div class="container py-16 md:py-20" id="work">
+  <h2
+    class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+  >
+    My work experience
+  </h2>
+  
+  <div class="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
+    <span
+      class="left-2/5 absolute inset-y-0 ml-10 hidden w-0.5 bg-grey-40 md:block"
+    ></span>
+
+    <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
+      <div class="md:w-2/5">
+        <div class="flex justify-center md:justify-start">
+         <h2>IGSS</h2>
+          <div class="relative ml-3 hidden w-full md:block">
+            <span
+              class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-3/5">
+        <div class="relative flex md:pl-18">
+          <span
+            class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+          ></span>
+
+          <div class="mt-1 flex">
+            <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
+            <div class="md:-mt-1 md:pl-8">
+              <span class="block font-body font-bold text-grey-40"
+                >2023 -Present</span
+              >
+              <span
+                class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                >Data Analyst</span
+              >
+              <div class="pt-2">
+                <span class="block font-body text-black"
+                  >Data Engineering: Designs, implements, and optimizes robust ETL
+                    workflows to support efficient, secure, and high-volume data
+                    processing. Proficient in API integration for raw data ingestion and
+                    orchestration of end-to-end pipelines.
+                    Data Analysis & Reporting: Develops and publishes analytical
+                    Power BI dashboards focused on Key Performance Indicators
+                    (KPIs), enabling data-driven decision-making across business
+                    units.
+                    Data Quality & Governance: Oversees database integrity and
+                    enforces data governance practices to safeguard sensitive
+                    information. Manages user access and system integrity within the
+                    E-PMS Performance System.
+                    Technical Stack: Advanced use of SQL, Python, and PySpark for
+                    data mining, anomaly detection, and business insight generation.
+                    Experienced in documenting data workflows and systems for
+                    compliance and cross-functional knowledge sharing</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
+      <div class="md:w-2/5">
+        <div class="flex justify-center md:justify-start">
+          <h2>ORINON</h2>
+          <div class="relative ml-3 hidden w-full md:block">
+            <span
+              class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-3/5">
+        <div class="relative flex md:pl-18">
+          <span
+            class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+          ></span>
+
+          <div class="mt-1 flex">
+            <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
+            <div class="md:-mt-1 md:pl-8">
+              <span class="block font-body font-bold text-grey-40"
+                >Jan 2021 - March 2023</span
+              >
+              <span
+                class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                >Junior Data Analyst</span
+              >
+              <div class="pt-2">
+                <span class="block font-body text-black"
+                  >Managed all SAP BI reporting tools, implementation and
+                  published power BI ,SAP BI reports for the organisation.
+                  Participated in the collection of data from various sources and
+                  creating automated data pipelines using Microsoft SSiS.
+                  Aided in cleaning data as part of the dataset preparation for
+                  analysis.Utilized SQL and python for data mining, extraction, and analysing
+                  different databases ,data sources to uncover new business
+                  insights.
+                  Supervised user acceptance testing for new products, features,
+                  and configurations.
+                  Monitored database performance and optimized system
+                  efficiency through tuning and maintenance.
+                  Ensured database security by applying audit trails to track data
+                  activity
+                .</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
+      <div class="md:w-2/5">
+        <div class="flex justify-center md:justify-start">
+          <h2>POSB</h2>
+          <div class="relative ml-3 hidden w-full md:block">
+            <span
+              class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-3/5">
+        <div class="relative flex md:pl-18">
+          <span
+            class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+          ></span>
+
+          <div class="mt-1 flex">
+            <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
+            <div class="md:-mt-1 md:pl-8">
+              <span class="block font-body font-bold text-grey-40"
+                >October 2019 - Feb 2021</span
+              >
+              <span
+                class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                >IT Graduate Trainee</span
+              >
+              <div class="pt-2">
+                <span class="block font-body text-black"
+                  >Managed all SAP reporting tools and implemented Power BI
+                    reports for the bank.
+                    Utilized SQL for data mining, extraction, and analysis to generate
+                    new business insights.
+                    Supervised user acceptance testing for new products, features,
+                    and configurations.
+                    Provided technical support to staff on software applications.
+                    Documented technical issues and changes related to the
+                    system.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container py-16 md:py-20" id="contact">
+  
+  
+  <div class="flex flex-col pt-16 lg:flex-row">
+    <div
+      class="w-full border-l-2 border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3"
+    >
+      <div class="flex items-center">
+        <i class="bx bx-phone text-2xl text-grey-40"></i>
+        <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+          My Phone
+        </p>
+      </div>
+      <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+        (+27) 060 3 553 822
+      </p>
+    </div>
+    <div
+      class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
+    >
+      <div class="flex items-center">
+        <i class="bx bx-envelope text-2xl text-grey-40"></i>
+        <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+          My Email
+        </p>
+      </div>
+      <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+        kudzaishemanyanya@gmail.com
+      </p>
+    </div>
+    <div
+      class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
+    >
+      <div class="flex items-center">
+        <i class="bx bx-map text-2xl text-grey-40"></i>
+        <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+          My Address
+        </p>
+      </div>
+      <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+        Durban, South Africa
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="bg-primary">
+  <div class="container flex flex-col justify-between py-6 sm:flex-row">
+    <p class="text-center font-body text-white md:text-left">
+      © Copyright 2022. • Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a> •  All right reserved, ATOM.
+    </p>
+    <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
+       <a href="https://github.com/Kudzaishe96" class="pl-4" target="_blank">
+              <i class="bx bxl-github text-2xl text-white hover:text-yellow"></i>
+            </a>
+      <a href="Https://www.linkedin.com/in/kudzaishe-manyanya96" class="pl-4">
+        <i class="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
+      </a>
+      <a href="/" class="pl-4">
+        <i class="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+
+    
+  </body>
+</html>
